@@ -1,12 +1,13 @@
 ﻿// ConsoleApplication1.cpp : このファイルには 'main' 関数が含まれています。プログラム実行の開始と終了がそこで行われます。
 //
 
-#include <iostream>
+#include <stdio.h>
 
 int main()
 {
 	int i, j;
-	double temp = 0;
+	double temp = 0; //一時保存変数
+
 	double kousui[4][12] =
 	{ {69.5, 59.0, 64.5, 135.0, 149.0, 579.0, 223.0, 2.0, 574.0, 200.0, 88.5, 55.0},
 	   {55.5, 24.5, 82.0, 144.5, 112.0, 160.0, 203.0, 82.5, 389.5, 620.5, 33.0, 3.0},
@@ -17,8 +18,10 @@ int main()
 	{
 		for (j = 0; j < 12; j++)
 		{
+			//tempにその年の降水量を全て足す
 			temp += kousui[i][j];
 		}
+		//その年の降水量を出力し、tempを0にリセット
 		printf("%d年の降水量合計%.1lf[mm]\n", i + 2016, temp);
 		temp = 0;
 
@@ -28,8 +31,10 @@ int main()
 	{
 		for (j = 0; j < 4; j++)
 		{
+			//tempにその月の降水量を全て足す
 			temp += kousui[j][i];
 		}
+		//その月の降水量の平均を求めるため4で割り出力、tempをリセット
 		printf("%d月の降水量平均%.1lf[mm]\n", i + 1, temp / 4.0);
 		temp = 0;
 	}
