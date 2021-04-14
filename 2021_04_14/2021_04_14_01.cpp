@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "stdio.h"
 
 typedef struct myaddress {
 	char name[20]; //–¼‘O
