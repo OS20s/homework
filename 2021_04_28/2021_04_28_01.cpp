@@ -1,7 +1,6 @@
 #include "stdio.h"
 #include <stdlib.h>
 #include <time.h>
-#pragma warning(disable:4996)
 
 #define N 10000.0 //回数指定 N = 10000
 
