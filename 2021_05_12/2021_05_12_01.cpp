@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <string.h>
 
-void kaibun(char*, char*); //ƒvƒƒgƒ^ƒCƒvéŒ¾
+void kaibun(char*, char*); //ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—å®£è¨€
 
 int main() {
-	char moto[] = "AKASAKA"; //Œ³ƒf[ƒ^
-	char kotae[21]; //‹t‚Ìƒf[ƒ^
+	char moto[] = "AKASAKA"; //å…ƒãƒ‡ãƒ¼ã‚¿
+	char kotae[21]; //é€†ã®ãƒ‡ãƒ¼ã‚¿
 
-	kaibun(moto, kotae); //kaibun()‚ğŒÄ‚Ño‚µ
+	kaibun(moto, kotae); //kaibun()ã‚’å‘¼ã³å‡ºã—
 
-	printf("Œ³‚Ìƒf[ƒ^ %s\n", moto);
-	printf("‹t‚Ìƒf[ƒ^ %s\n", kotae);
-	if (strcmp(moto, kotae) == 0) //‚à‚µŒ³‚Æ‹t‚Ìƒf[ƒ^‚ªˆê’v‚µ‚½‚ç
-		printf("‰ñ•¶‚Å‚·\n");
-	else printf("‰ñ•¶‚Å‚Í‚ ‚è‚Ü‚¹‚ñ\n");
+	printf("å…ƒã®ãƒ‡ãƒ¼ã‚¿ %s\n", moto);
+	printf("é€†ã®ãƒ‡ãƒ¼ã‚¿ %s\n", kotae);
+	if (strcmp(moto, kotae) == 0) //ã‚‚ã—å…ƒã¨é€†ã®ãƒ‡ãƒ¼ã‚¿ãŒä¸€è‡´ã—ãŸã‚‰
+		printf("å›æ–‡ã§ã™\n");
+	else printf("å›æ–‡ã§ã¯ã‚ã‚Šã¾ã›ã‚“\n");
 
 	return 0;
 }
@@ -21,13 +21,13 @@ int main() {
 void kaibun(char* moto, char* kotae) {
 	int i;
 	char temp;
-	int nagasa = strlen(moto); //nagasa ‚É moto ‚Ì’·‚³‚ğ‘ã“ü
+	int nagasa = strlen(moto); //nagasa ã« moto ã®é•·ã•ã‚’ä»£å…¥
 
-	strcpy(kotae, moto); //kotae ‚É moto ‚ğƒRƒs[
+	strcpy(kotae, moto); //kotae ã« moto ã‚’ã‚³ãƒ”ãƒ¼
 
 
-	//‚±‚±‚©‚ç•¶š“ü‚ê‘Ö‚¦
-	//Å‰‚©‚çi•¶š–Ú‚ÆÅŒã‚©‚çi•¶š–Ú‚ğ“ü‚ê‘Ö‚¦‚é
+	//ã“ã“ã‹ã‚‰æ–‡å­—å…¥ã‚Œæ›¿ãˆ
+	//æœ€åˆã‹ã‚‰iæ–‡å­—ç›®ã¨æœ€å¾Œã‹ã‚‰iæ–‡å­—ç›®ã‚’å…¥ã‚Œæ›¿ãˆã‚‹
 	for (i = 0; i < nagasa / 2; i++) {
 		temp = kotae[i]; 
 		kotae[i] = kotae[nagasa-1 - i];
