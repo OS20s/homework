@@ -33,4 +33,5 @@ void kaibun(char* moto, char* kotae) {
 		kotae[i] = kotae[nagasa-1 - i];
 		kotae[nagasa-1 - i] = temp; 
 	}
+	
 }
